@@ -39,10 +39,7 @@ src/
 │       └── MatchedBreed.tsx
 ├── pages/
 │   └── SearchPage.tsx
-├── assets/
-│   ├── logo.svg
-│   ├── paw-click.gif
-│   └── dog-run2.gif
+|
 └── types/
     └── interfaces.ts
 ```
@@ -59,7 +56,7 @@ src/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/pawsome.git
+git clone https://github.com/Vishwanath2300/fetchfrontendassesment.git
 ```
 
 2. Install dependencies:
@@ -120,5 +117,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-Project Link: [https://github.com/yourusername/pawsome](https://github.com/yourusername/pawsome)
+Your Name - Vishwanath Chintala
+Project Link: https://github.com/Vishwanath2300/fetchfrontendassesment.git

@@ -331,7 +331,7 @@ const getLocationDetails = async () => {
           onClick={matchDog}
           />
         ): (<img 
-          src='/paw-click.gif' 
+          src='/paw-click.png' 
           alt="Match button" 
           className="w-16 h-16 object-contain filter" 
           />)}
