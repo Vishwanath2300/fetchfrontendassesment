@@ -289,14 +289,28 @@ const getLocationDetails = async () => {
     <div className="flex justify-center w-full">
 <div className="max-w-7xl w-full flex flex-col items-center gap-6 ">
 
-  
+  {/* Match List */}
+<div className="w-full flex justify-end px-5 md:px-8 lg:px-12">
+  <div className="max-w-xs">
+          <MatchList 
+            favoriteDogs={favoriteDogs}
+            onRemove={(dogId) => {
+              toggleFavorite(dogId);
+              setFavoriteDogs(prev => prev.filter(dog => dog.id !== dogId));
+            }}
+            />
+        </div>
+        </div>
+
+
       {/* Breed Dropdown */}
-      <select
-        className="rounded-4xl p-2 w-84 mt-[-40px] b flex-shrink-0 hover:bg-yellow-500 text-[15px] bg-[#e1e7e1]"
-        onChange={(e) => {
-          setSelectedBreed(e.target.value);
-          setPage(0); // Reset page
-        }}
+<div className="w-full max-w-xs mt-[-100px]">
+  <select
+    className="w-full rounded-4xl p-2 flex-shrink-0 hover:bg-yellow-500 text-[15px] bg-[#e1e7e1]"
+    onChange={(e) => {
+      setSelectedBreed(e.target.value);
+      setPage(0);
+    }}
         value={selectedBreed}
         >
         <option value="">All Breeds</option>
@@ -306,10 +320,12 @@ const getLocationDetails = async () => {
           </option>
         ))}
       </select>
+      </div>
 
+      {/* Location Dropdown */}
 
-      {/* Match List  */}
-        <div className="absolute top-60 right-4">
+      {/* Match List 
+        <div className="relative top-1 right-1">
           <MatchList 
             favoriteDogs={favoriteDogs}
             onRemove={(dogId) => {
@@ -317,7 +333,7 @@ const getLocationDetails = async () => {
               setFavoriteDogs(prev => prev.filter(dog => dog.id !== dogId));
             }}
             />
-        </div>
+        </div> */}
 
       {/* Match Button */}
       
