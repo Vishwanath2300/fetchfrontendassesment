@@ -357,7 +357,7 @@ const getLocationDetails = async () => {
         {dogs.length === 0 ? (
           <div className="text-center text-gray-500">
             <p className='text-2xl'>No Paws Found</p>
-          <img src='src/assets/dog-run2.gif'  className="text-center w-40 h-20 mt-10 text-gray-500"></img>
+          <img src='/src/assets/dog-run2.gif'  className="text-center w-40 h-20 mt-10 text-gray-500"></img>
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  mt-4">
