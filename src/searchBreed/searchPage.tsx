@@ -170,9 +170,10 @@ const getLocationDetails = async () => {
     fetchDogIds();
   }, [selectedBreed, page]);
 
-  const applyfilter = () => {
-    fetchDogIds();
-  }
+  const applyfilter = async () => {
+  setPage(0); // Reset page when filters are applied
+  await fetchDogIds();
+};
 
   // Function to toggle favorite status of a dog
   const toggleFavorite = (id: string) => {
@@ -237,7 +238,7 @@ const getLocationDetails = async () => {
 
       <div className="flex flex-col items-center justify-center py-10">
         <img 
-          src='public/logo.svg' 
+          src='/logo.svg' 
           alt="Pawsome Logo" 
           className="w-50 h-40 object-contain"
         />

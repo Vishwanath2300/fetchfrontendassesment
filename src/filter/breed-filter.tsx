@@ -1,5 +1,5 @@
 import type { Location } from '../types/interfaces';
-
+import { useState,useEffect } from 'react';
 
 interface breedfilterProps {
   sortOrder: 'asc' | 'desc';
@@ -45,6 +45,30 @@ function BreedFilter({
   isSidebarOpen,
   setIsSidebarOpen
 }: breedfilterProps) {
+
+const [resetTrigger, setResetTrigger] = useState(false);
+
+//Reset filter 
+useEffect(() => {
+  if (resetTrigger) {
+    applyFilter();
+    setResetTrigger(false);
+  }
+}, [resetTrigger]);
+
+
+  const resetFilters = () => {
+  setSortOrder('asc');
+  setCityFilter('');
+  setStateFilter('');
+  setSelectedZipCodes([]);
+  setSortType('name');
+  setLocationPage(0);
+  locations.length=0
+  setResetTrigger(true); // trigger applyFilter
+};
+
+ 
   return (
     <>
 
@@ -68,12 +92,21 @@ function BreedFilter({
             </svg>
           </button>
         </div>
+
+{/* Apply Filter */}
       <button
         onClick={() => applyFilter()}
         className="block mb-4 px-20 py-2 bg-[#e1e7e1] text-black  rounded-4xl hover:bg-yellow-500"
         >
         Apply filter
       </button>
+{/* Reset Filter */}
+      <button
+      onClick={()=>{resetFilters()}}
+      className="block mb-8 px-20 py-2 bg-red-100 text-black rounded-4xl hover:bg-red-200"
+    >
+      Reset Filters
+    </button>
 
 {/* Filter by breed */}
       <h2>Sort Type</h2>
