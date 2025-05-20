@@ -113,7 +113,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Dog images and data provided by Fetch API
 - Icons from various open-source libraries
-- Community contributions and feedback
 
 ## 📞 Contact
 
