@@ -237,7 +237,7 @@ const getLocationDetails = async () => {
 
       <div className="flex flex-col items-center justify-center py-10">
         <img 
-          src='src/assets/logo.svg' 
+          src='public/logo.svg' 
           alt="Pawsome Logo" 
           className="w-50 h-40 object-contain"
         />
@@ -324,13 +324,13 @@ const getLocationDetails = async () => {
         <div className="relative transform transition-transform group-hover:scale-110">
         {favoriteDogIds.length > 0 ? (
           <img 
-          src='src/assets/paw-click.gif' 
+          src='/paw-click.gif' 
           alt="Match button" 
           className="w-16 h-16 object-contain filter "
           onClick={matchDog}
           />
         ): (<img 
-          src='src/assets/paw-click.gif' 
+          src='/paw-click.gif' 
           alt="Match button" 
           className="w-16 h-16 object-contain filter" 
           />)}
@@ -357,7 +357,7 @@ const getLocationDetails = async () => {
         {dogs.length === 0 ? (
           <div className="text-center text-gray-500">
             <p className='text-2xl'>No Paws Found</p>
-          <img src='/src/assets/dog-run2.gif'  className="text-center w-40 h-20 mt-10 text-gray-500"></img>
+          <img src='/dog-run2.gif'  className="text-center w-40 h-20 mt-10 text-gray-500"></img>
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  mt-4">

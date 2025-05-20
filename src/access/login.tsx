@@ -82,7 +82,7 @@ const Login = () => {
           <div className="flex justify-center mb-0">
             {/* <span className="text-5xl">🐕</span> */}
             <img 
-                src="src/assets/logo.svg" 
+                src="/logo.svg" 
                 alt="Dog Icon" 
                 className="w-40 h-40 object-contain "
               />
